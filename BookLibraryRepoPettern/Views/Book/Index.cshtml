@@ -1,0 +1,76 @@
+﻿@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model IEnumerable<BookLibraryRepoPetternCore.Book>
+@{
+    ViewData["Title"] = "List Of Books";
+}
+<h3>@ViewData["Title"]</h3>
+<hr />
+
+<form>
+    <button asp-action="CreateOrEdit" asp-controller="Book" class="btn btn-primary mb-3">Create New Book</button>
+
+    <table class="table table-responsive table-bothered table-hover">
+
+        <tr class="table-active">
+            <th>
+                @Html.DisplayNameFor(Book => Book.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Book => Book.Title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(Book => Book.Author)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(Book => Book.Genre)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(Book => Book.Description)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(Book => Book.PublishDate)
+            </th>
+            <th>Action</th>
+        </tr>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var data in Model)
+                {
+                    <tr>
+                        <td>@data.Id</td>
+                        <td>@data.Title</td>
+                        <td>@data.Author</td>
+                        <td>@data.Genre</td>
+                        <td>@data.Description</td>
+                        <td>@data.PublishDate</td>
+                        <td class="text-center">
+                            <div class="btn-group btn-group-sm">
+                                <a asp-controller="Book" asp-action="CreateOrEdit" asp-route-id="@data.Id" class="btn btn-success">Edit</a>
+                            </div>
+
+                            <div class="btn-group btn-group-sm">
+                                <a asp-controller="Book" asp-action="Delete" asp-route-id="@data.Id" class="btn btn-danger">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7">
+                        <div>
+                            No Books Available at the moment
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</form>
