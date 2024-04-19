@@ -17,7 +17,7 @@ namespace BookLibraryRepoPetternCore
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(
-                "server=DAMILARELAPPY;Database=BookLibraryRepoPettern_DB;Trusted_connection=True;TrustServerCertificate=True");
+                "server=DESKTOP-F0FU8D3\\DEVELOPER;Database=BookLibraryRepoPettern_DB;Trusted_connection=True;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -20,9 +20,9 @@ namespace BookLibraryRepoPetternCore
         public DateTime PublishDate { get; set; }
 
 
-        IEnumerable<Book> Books { get; set; }
+        IEnumerable<Book>? Books { get; set; }
 
 
-        public ICollection<Book> books { get; set; }
+        public ICollection<Book>? books { get; set; }
     }
 }

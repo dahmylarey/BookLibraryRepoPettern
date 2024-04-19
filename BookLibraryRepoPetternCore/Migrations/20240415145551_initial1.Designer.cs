@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookLibraryRepoPetternCore.Migrations
 {
     [DbContext(typeof(BookDbContext))]
-    [Migration("20240404182212_BooksLibraryTable")]
-    partial class BooksLibraryTable
+    [Migration("20240415145551_initial1")]
+    partial class initial1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,7 +68,7 @@ namespace BookLibraryRepoPetternCore.Migrations
                             Author = "Damilare oladele",
                             Description = "Display info about the Book.",
                             Genre = "Asian",
-                            PublishDate = new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4407),
+                            PublishDate = new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(957),
                             Title = "Eternal secred king"
                         },
                         new
@@ -77,7 +77,7 @@ namespace BookLibraryRepoPetternCore.Migrations
                             Author = "James wood",
                             Description = "Display info about the Book.",
                             Genre = "Cultivation",
-                            PublishDate = new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4421),
+                            PublishDate = new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(968),
                             Title = "Legend of swordsMan"
                         },
                         new
@@ -86,7 +86,7 @@ namespace BookLibraryRepoPetternCore.Migrations
                             Author = "muller james",
                             Description = "Display info about the Book.",
                             Genre = "Cultivation",
-                            PublishDate = new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4422),
+                            PublishDate = new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(969),
                             Title = "Walker of Worlds"
                         },
                         new
@@ -95,7 +95,7 @@ namespace BookLibraryRepoPetternCore.Migrations
                             Author = "Ibrahim Oloto",
                             Description = "Display info about the Book.",
                             Genre = "Cultivation",
-                            PublishDate = new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4424),
+                            PublishDate = new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(971),
                             Title = "Emperor Dominations"
                         },
                         new
@@ -104,7 +104,7 @@ namespace BookLibraryRepoPetternCore.Migrations
                             Author = "chen Ming",
                             Description = "Display info about the Book.",
                             Genre = "Asian",
-                            PublishDate = new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4425),
+                            PublishDate = new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(972),
                             Title = "Loaded With Persive Skills"
                         });
                 });

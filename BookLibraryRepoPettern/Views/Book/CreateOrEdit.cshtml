@@ -1,19 +1,16 @@
-﻿@using Microsoft.EntityFrameworkCore.Metadata.Internal
-@model BookLibraryRepoPetternCore.Book
-@{
-    ViewData["Title"] = Model != null && Model.Id ==0 ? "Create Book" :"Edit Book";
-}
+﻿@model BookLibraryRepoPetternCore.Book
+
 <form method="post" action="CreateOrEdit">
     <div class="card">
-        <div class="card-header align-content-center bg-info">
+     @*    <div class="card-header align-content-center bg-info">
             <h2 class="text-center">@ViewData["Title"]</h2>
-        </div>
+        </div> *@
         <div class="card-body">
            <input type="hidden" for="Id"/>
 
          </div>
         <div class="form-floating mb-2">
-            <input for="Title" class="form-control">
+            <input for="Title" class="form-control" required>
             <label for="Title">Title</label>
             <span validation-for="Title"></span>
         </div>

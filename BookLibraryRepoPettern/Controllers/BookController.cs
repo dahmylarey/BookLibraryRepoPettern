@@ -1,7 +1,6 @@
 ﻿using BookLibraryRepoPetternCore;
 using BookLibraryRepoPetternServicelayer.Interface;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace BookLibraryRepoPettern.Controllers
 {
@@ -20,33 +19,38 @@ namespace BookLibraryRepoPettern.Controllers
             return View(data);
         }
 
-        [HttpGet]
-        public async Task <IActionResult> CreateOrEdit(int id = 0) 
-        { 
-            if (id == 0) 
-            {
-                return View(new Book());
-            }
-            else {
-                try
-                {
-                    Book book = await bookRepo.GetById(id);
+        //[HttpPost]
+        //public async Task <IActionResult> CreateOrEdit(int id = 0) 
+        //{ 
+        //    if (id == 0) 
+        //    {
+        //        return View(new Book());
+        //    }
+        //    else {
+        //        try
+        //        {
+        //            Book book = await bookRepo.GetById(id);
 
-                    if (book != null)
-                    {
-                        return View(book);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    TempData["ErrorMessage"] = ex.Message;
-                    return RedirectToAction("Index");
-                }
-                TempData["SuccesMessage"] = "Book Details not found with Id";
-                return RedirectToAction("Index");
-            }
+        //            if (book != null)
+        //            {
+        //                return View(book);
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            TempData["ErrorMessage"] = ex.Message;
+        //            return RedirectToAction("Index");
+        //        }
+        //        TempData["SuccesMessage"] = "Book Details not found with Id";
+        //        return RedirectToAction("Index");
+        //    }
 
             
+        //}
+
+        public IActionResult create()
+        { 
+            return View();
         }
 
         [HttpPost]

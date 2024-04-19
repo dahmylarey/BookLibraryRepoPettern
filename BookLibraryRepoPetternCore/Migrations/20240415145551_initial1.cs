@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BookLibraryRepoPetternCore.Migrations
 {
     /// <inheritdoc />
-    public partial class BooksLibraryTable : Migration
+    public partial class initial1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -41,11 +41,11 @@ namespace BookLibraryRepoPetternCore.Migrations
                 columns: new[] { "Id", "Author", "BookId", "Description", "Genre", "PublishDate", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Damilare oladele", null, "Display info about the Book.", "Asian", new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4407), "Eternal secred king" },
-                    { 2, "James wood", null, "Display info about the Book.", "Cultivation", new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4421), "Legend of swordsMan" },
-                    { 3, "muller james", null, "Display info about the Book.", "Cultivation", new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4422), "Walker of Worlds" },
-                    { 4, "Ibrahim Oloto", null, "Display info about the Book.", "Cultivation", new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4424), "Emperor Dominations" },
-                    { 5, "chen Ming", null, "Display info about the Book.", "Asian", new DateTime(2024, 4, 4, 19, 22, 12, 407, DateTimeKind.Local).AddTicks(4425), "Loaded With Persive Skills" }
+                    { 1, "Damilare oladele", null, "Display info about the Book.", "Asian", new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(957), "Eternal secred king" },
+                    { 2, "James wood", null, "Display info about the Book.", "Cultivation", new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(968), "Legend of swordsMan" },
+                    { 3, "muller james", null, "Display info about the Book.", "Cultivation", new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(969), "Walker of Worlds" },
+                    { 4, "Ibrahim Oloto", null, "Display info about the Book.", "Cultivation", new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(971), "Emperor Dominations" },
+                    { 5, "chen Ming", null, "Display info about the Book.", "Asian", new DateTime(2024, 4, 15, 15, 55, 50, 931, DateTimeKind.Local).AddTicks(972), "Loaded With Persive Skills" }
                 });
 
             migrationBuilder.CreateIndex(
