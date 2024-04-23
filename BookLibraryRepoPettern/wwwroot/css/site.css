@@ -18,5 +18,7 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    box-sizing:border-box;
+    margin:auto
+      margin-bottom: 60px;
 }

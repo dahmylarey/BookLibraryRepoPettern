@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BookLibraryRepoPetternCore.DataModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,13 @@ namespace BookLibraryRepoPetternCore
         public BookDbContext(DbContextOptions<BookDbContext> options) : base(options){}
 
         public DbSet<Book> Books { get; set; } = null;
+        public DbSet<Tbl_Author>  tbl_Authors{ get; set; } = null;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(
-                "server=DESKTOP-F0FU8D3\\DEVELOPER;Database=BookLibraryRepoPettern_DB;Trusted_connection=True;TrustServerCertificate=True");
+                "server=damilareLappy; Database=BookLibraryRepoPettern_DB;Trusted_connection=True;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -79,8 +81,11 @@ namespace BookLibraryRepoPetternCore
                        Description = "Display info about the Book.",
 
                        PublishDate = DateTime.Now,
-                   }) ;
+                   });
         }
-
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Tbl_Author>().HasMany(AuthorId => tbl_Authors).WithMany(name => tbl_Authors).UsingEntity(j => j.ToTable("TBl_Authors"));
+        //}
     }
 }

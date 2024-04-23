@@ -6,23 +6,8 @@
 <h3>@ViewData["Title"]</h3>
 <hr />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap-icons.css" rel="stylesheet">
-
-<link rel="stylesheet" href="css/slick.css" />
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-<link href="css/tooplate-little-fashion.css" rel="stylesheet">
-
-<form>
-    <button asp-action="Create" asp-controller="Book" class="btn btn-primary mb-3">Create New Book</button>
+<button asp-action="Create" asp-controller="Book" class="btn btn-primary mb-3">Create New Book</button>
+@*<form>
 
     <table class="table table-responsive table-bothered table-hover">
 
@@ -88,7 +73,50 @@
         </tbody>
 
     </table>
-</form>
+
+
+
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var data in Model)
+        {
+            <tr>
+                <td>@data.Id</td>
+                <td>@data.Title</td>
+                <td>@data.Author</td>
+                <td>@data.Genre</td>
+                <td>@data.Description</td>
+                <td>@data.PublishDate</td>
+                <td class="text-center">
+                    <div class="btn-group btn-group-sm">
+                        <a asp-controller="Book" asp-action="CreateOrEdit" asp-route-id="@data.Id" class="btn btn-success">Edit</a>
+                    </div>
+
+                    <div class="btn-group btn-group-sm">
+                        <a asp-controller="Book" asp-action="Delete" asp-route-id="@data.Id" class="btn btn-danger">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="7">
+                <div>
+                    No Books Available at the moment
+                </div>
+            </td>
+        </tr>
+    }
+
+</form>*@
+
+
+
+
+
+
 
 <section class="front-product">
     <div class="container-fluid p-0">
@@ -98,15 +126,44 @@
                 <img src="images/retail-shop-owner-mask-social-distancing-shopping.jpg" class="img-fluid" alt="">
             </div>
 
+            <div class="row">
+
+                @foreach (var Book in Model)
+                {
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <svg class="bd-placeholder card-img-top" width="100%" height="225" src="https://novelbin.me/media/novel/eternal-sacred-king.jpg" alt="Card image cap">
+
+                                <div class="card-body">
+                                    <h3 class="card-title">@Book.Title</h3>
+                                    <p class="card-text">@Book.Description </p>
+                                    <h4><p class="card-text">@Book.PublishDate </p></h4>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="btn-group">
+                                            <a href="/Book/GetBook/@Book.Id" class="btn btn-sm btn-outline-secondary">View details</a>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">@Book.Author</small>
+                                </div>
+
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+
             <div class="col-lg-6 col-12">
                 <div class="px-5 py-5 py-lg-0">
 
-                    <h2 class="mb-4"><span>Books</span> shop</h2>
+                   
+
+                    <h2 class="mb-4"><span>@Html.DisplayNameFor(Book => Book.Title)</h2>
 
                     <p class="lead mb-4">Credits go to Unsplash and FreePik websites for images used in this Little Fashion by Tooplate.</p>
 
-                    <a asp-action="Index" asp-controller="Book" class="custom-link">
-                        Explore Books
+                    <a href="products.html" class="custom-link">
+                        Explore Products
                         <i class="bi-arrow-right ms-2"></i>
                     </a>
                 </div>
@@ -115,3 +172,7 @@
         </div>
     </div>
 </section>
+
+
+
+
