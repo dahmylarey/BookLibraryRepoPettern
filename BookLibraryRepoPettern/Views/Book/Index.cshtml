@@ -6,6 +6,21 @@
 <h3>@ViewData["Title"]</h3>
 <hr />
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/slick.css" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+<link href="css/tooplate-little-fashion.css" rel="stylesheet">
+
 <form>
     <button asp-action="Create" asp-controller="Book" class="btn btn-primary mb-3">Create New Book</button>
 
@@ -74,3 +89,29 @@
 
     </table>
 </form>
+
+<section class="front-product">
+    <div class="container-fluid p-0">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 col-12">
+                <img src="images/retail-shop-owner-mask-social-distancing-shopping.jpg" class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="px-5 py-5 py-lg-0">
+
+                    <h2 class="mb-4"><span>Books</span> shop</h2>
+
+                    <p class="lead mb-4">Credits go to Unsplash and FreePik websites for images used in this Little Fashion by Tooplate.</p>
+
+                    <a asp-action="Index" asp-controller="Book" class="custom-link">
+                        Explore Books
+                        <i class="bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

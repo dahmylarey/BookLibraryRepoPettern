@@ -8,5 +8,7 @@ namespace BookLibraryRepoPetternCore.DataModels
         [Key, Column("AuthorId")]
         public int AuthorId { get; set; }
         public string Name { get; set; } = string.Empty;
+
+        public virtual Book Books { get; set; }
     }
 }
