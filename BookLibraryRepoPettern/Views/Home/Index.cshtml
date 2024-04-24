@@ -1,9 +1,69 @@
 ﻿@using Microsoft.EntityFrameworkCore.Metadata.Internal
 @model IEnumerable<BookLibraryRepoPetternCore.Book>
 @{
-    ViewData["Title"] = "Dahmylarey Book Library";
+    Layout = "_Layout";
 }
 
+<section class="slick-slideshow">
+    <div class="slick-custom">
+        <img src="images/slideshow/medium-shot-business-women-high-five.jpeg" class="img-fluid" alt="">
+
+        <div class="slick-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-10">
+                        <h1 class="slick-title">Cool Books</h1>
+
+                        <p class="lead text-white mt-lg-3 mb-lg-5">full Of Suspense</p>
+
+                        <a asp-area="" asp-controller="Book" asp-action="Index" class="btn custom-btn">See BookLists</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slick-custom">
+        <img src="images/slideshow/team-meeting-renewable-energy-project.jpeg" class="img-fluid" alt="">
+
+        <div class="slick-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-10">
+                        <h1 class="slick-title">New Books</h1>
+
+                        <p class="lead text-white mt-lg-3 mb-lg-5">Popular Authors.</p>
+
+
+                        <a asp-area="" asp-controller="Book" asp-action="Index" class="btn custom-btn">Explore BookLists</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slick-custom">
+        <img src="images/slideshow/two-business-partners-working-together-office-computer.jpeg" class="img-fluid" alt="">
+
+        <div class="slick-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-10">
+                        <h1 class="slick-title">Want to Join us?</h1>
+
+                        <p class="lead text-white mt-lg-3 mb-lg-5">Be part Of Family Of best Authors.</p>
+
+
+
+                        <a asp-area="" asp-controller="Book" asp-action="Index" class="btn custom-btn">Explore products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 <h1>@ViewData["Title"]</h1><br /><br />
 
