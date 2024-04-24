@@ -11,24 +11,27 @@ namespace BookLibraryRepoPetternCore
 {
     public class Book
     {
+       
 
         [Key]
         public int Id { get; set; }
         public string Title { get; set; }
 
-        [ForeignKey("AuthorId")]
+        
         public string Author { get; set; }
         public string Genre { get; set; }
 
         public string Description { get; set; }
         public DateTime PublishDate { get; set; }
 
-        
-        public virtual  Tbl_Author? Tbl_Authors { get; set; }
+              
+        [ForeignKey("AuthorId")]
+        public virtual Tbl_Author? AuthorsCollection { get; set; }
+
 
         public IEnumerable<Book>? Books { get; set; }
 
         
-        public ICollection<Book>? books { get; set; }
+        public ICollection<Book>? Journal { get; set; }
     }
 }

@@ -81,6 +81,7 @@ namespace BookLibraryRepoPetternCore
                        Description = "Display info about the Book.",
 
                        PublishDate = DateTime.Now,
+                      
                    });
         }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
