@@ -1,10 +1,10 @@
 ﻿@using Microsoft.EntityFrameworkCore.Metadata.Internal
 @model IEnumerable<BookLibraryRepoPetternCore.Book>
 @{
-    ViewData["Title"] = "List Of Books";
+    ViewData["Title"] = "Collections Of Books";
 }
-@*<h3>@ViewData["Title"]</h3>*@
-<hr />
+
+
 
 @*<button asp-action="Create" asp-controller="Book" class="btn btn-danger mb-3">Create New Book</button>*@
 @*<form>
@@ -120,6 +120,10 @@
 
 <section class="front-product">
     <div class="container-fluid p-0">
+        <div class="text-capitalize text-center mb-3 ">
+            <h3 class="text-secondary mt-5">@ViewData["Title"]</h3>
+        </div><br />
+
         <div class="row align-items-center justify-content-center gap-3">
 
             @foreach (var data in Model)
