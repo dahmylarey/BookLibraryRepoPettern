@@ -13,7 +13,6 @@ namespace BookLibraryRepoPettern.Controllers
         public BookController(IBookRepository bookRepo, IWebHostEnvironment webHostEnvironment)
         {
             this.bookRepo = bookRepo;
-            webHostEnvironment = webHostEnvironment;
         }
 
         public async Task<IActionResult> Index()

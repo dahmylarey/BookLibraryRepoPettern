@@ -115,9 +115,6 @@
 
 
 
-
-
-
 <section class="front-product">
     <div class="container-fluid p-0">
         <div class="text-capitalize text-center mb-3 ">
@@ -129,28 +126,30 @@
             @foreach (var data in Model)
             {
                 <div class="col-md-4">
-                    <div class="card mb-4" style="max-width: ">
-                        @*<svg class="bd-placeholder card-img-top" width="100%" height="225" src="" alt="Card image cap">*@
+                    <div class="card mb-3" style="max-width: ">
+                        <svg class="bd-placeholder card-img-top" width="100%" height="225" src="" alt="Card image cap"></svg>
 
-                            <div class="card-body">
-                                <h3 class="card-title">@data.Title</h3>
-                                <p class="card-text">@data.Description </p>
-                                <h4><p class="card-text">@data.PublishDate </p></h4>
+                        <div class="card-body">
+                            <h3 class="card-title mb-2">@data.Title</h3>
+                            <p class="card-text ">@data.Description </p>
+                                <h4><p class="card-text mb-2">@data.PublishDate </p></h4>
 
+
+                                
                                 <div class="btn-group btn-group-sm">
-                                    <a asp-controller="Book" asp-action="Delete" asp-route-id="@data.Id" class="btn btn-danger">Delete</a>
+                                    <div class="d-flex gap-3">
+                                        <a asp-controller="Book" asp-action="Delete" asp-route-id="@data.Id" class="btn btn-danger">Delete</a>
+                                        <a asp-controller="Book" asp-action="CreateOrEdit" asp-route-id="@data.Id" class="btn btn-success ">Edit</a>
+                                    </div>
+
                                 </div><br /><br />
 
-                                @*<div class="btn-group">
-                            <a href="/Book/Index/@data.Id" class="btn btn-sm btn-outline-secondary">View details</a>
-                            </div>*@
-
-                                @*<div class="btn-group btn-group-sm">
-                            <a asp-controller="Book" asp-action="CreateOrEdit" asp-route-id="@data.Id" class="btn btn-success">Edit</a>
-                            </div>*@
+                               
 
                                 <small class="text-muted">@data.Author</small>
                              </div>
+
+
 
                     </div>
 

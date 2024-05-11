@@ -33,10 +33,10 @@ namespace BookLibraryRepoPetternCore
         [ForeignKey("AuthorId")]
         public virtual Tbl_Author? AuthorsCollection { get; set; }
 
-
+        [NotMapped]
         public IEnumerable<Book>? Books { get; set; }
 
-        
+        [NotMapped]
         public ICollection<Book>? Journal { get; set; }
     }
 }
