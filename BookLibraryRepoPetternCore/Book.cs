@@ -26,7 +26,7 @@ namespace BookLibraryRepoPetternCore
         public DateTime PublishDate { get; set; }
 
 
-        [Display(Name = "Choose the cover Photo of your Book")]
+        [NotMapped]
         public IFormFile CoverPhoto { get; set; }
 
 
