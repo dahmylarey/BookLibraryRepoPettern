@@ -1,5 +1,6 @@
 ﻿using BookLibraryRepoPetternCore;
 using BookLibraryRepoPetternServicelayer.Interface;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookLibraryRepoPettern.Controllers
@@ -8,9 +9,11 @@ namespace BookLibraryRepoPettern.Controllers
     {
         private readonly IBookRepository bookRepo;
 
-        public BookController(IBookRepository bookRepo)
+
+        public BookController(IBookRepository bookRepo, IWebHostEnvironment webHostEnvironment)
         {
             this.bookRepo = bookRepo;
+            webHostEnvironment = webHostEnvironment;
         }
 
         public async Task<IActionResult> Index()
@@ -60,6 +63,8 @@ namespace BookLibraryRepoPettern.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                   
+
                     if (model.Id == 0)
                     {
                         await bookRepo.Add(model);

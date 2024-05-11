@@ -49,4 +49,8 @@
     <ProjectReference Include="..\BookLibraryRepoPetternServicelayer\BookLibraryRepoPetternServicelayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Books\cover\" />
+  </ItemGroup>
+
 </Project>

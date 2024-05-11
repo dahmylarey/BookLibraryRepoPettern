@@ -1,4 +1,5 @@
 ﻿using BookLibraryRepoPetternCore.DataModels;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -24,7 +25,11 @@ namespace BookLibraryRepoPetternCore
         public string Description { get; set; }
         public DateTime PublishDate { get; set; }
 
-              
+
+        [Display(Name = "Choose the cover Photo of your Book")]
+        public IFormFile CoverPhoto { get; set; }
+
+
         [ForeignKey("AuthorId")]
         public virtual Tbl_Author? AuthorsCollection { get; set; }
 
